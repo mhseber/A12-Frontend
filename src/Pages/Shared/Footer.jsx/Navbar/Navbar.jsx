@@ -1,6 +1,7 @@
 import { MdCardMembership } from "react-icons/md";
 import logo from "../../../../assets/logo.png";
 import { IoIosHome } from "react-icons/io";
+import { Link } from "react-router-dom";
 const Navbar = () => {
     return (
         <div className="navbar bg-gray-900 text-white px-4">
@@ -50,7 +51,9 @@ const Navbar = () => {
                 </ul>
             </div>
             <div>
-                <div className="btn">Login</div>
+                <Link to="/login">
+                    <button className="btn">Login</button>
+                </Link>
             </div>
         </div>
     );
