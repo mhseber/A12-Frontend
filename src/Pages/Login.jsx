@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
 
@@ -68,7 +69,7 @@ const Login = () => {
             <div>
                 <div
                     style={{ backgroundImage: `url(${bgImg})` }}
-                    className="hero bg-base-200 min-h-screen bg-cover bg-center">
+                    className="hero bg-base-200 pt-28 bg-cover bg-center">
                     <div className="hero-content flex-col md:flex-row-reverse">
                         <div className="text-center md:w-1/2 lg:text-left">
                             <h1 className="text-5xl font-bold">Login now!</h1>
@@ -117,12 +118,15 @@ const Login = () => {
                                     {/* TODO: apply disabled for re captcha */}
                                     <input
                                         disabled={disabled}
-                                        className="btn btn-primary"
+                                        className="btn bg-yellow-700 text-white"
                                         type="submit"
-                                        value="Login" />
+                                        value="LogIn" />
+                                </div>
+                                <div className="form-control mt-2">
+                                    <button className="btn bg-black yellow-700 text-white" ><FcGoogle />SignUp Google</button>
                                 </div>
                             </form>
-                            <p className="px-6"><small>New Here?<Link to="/signup"><i className="text-blue-800">Create an Account</i></Link></small></p>
+                            <p className="px-3 text-center pb-3"><small>New Here?<Link to="/signup"><i className="text-blue-800">Create an Account</i></Link></small></p>
 
                         </div>
                     </div>

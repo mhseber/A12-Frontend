@@ -15,16 +15,16 @@ const Navbar = () => {
     const navOptions = <>
         <li><Link to="/"><IoIosHome />Home</Link></li>
         <li><Link to="/membership"> <MdCardMembership />Membership</Link></li>
+        <li className="pl-52 ">
+            {
+                user ? <>
 
-
-        {
-            user ? <>
-                {/* <span>{user?.displayName}</span> */}
-                <button onClick={handleLogOut} className="btn btn-outline border-0 border-b-4 border-t-4 text-black  ">LogOut</button>
-            </> : <>
-                <li><Link to="/login">LogIn </Link></li>
-            </>
-        }
+                    <button onClick={handleLogOut} className="btn btn-outline border-0 border-b-4 border-t-4 text-black  ">LogOut</button>
+                </> : <>
+                    <li><Link to="/login">LogIn </Link></li>
+                </>
+            }
+        </li>
 
     </>
     return (
@@ -53,7 +53,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <img className="w-10 " src={logo} alt="logo" />
-                    <a className="text-3xl font-extrabold pl-3">ThreadTales</a>
+                    <a className="text-3xl text-yellow-900 font-extrabold pl-3">ThreadTales</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 pr-20 text-[15px] font-extrabold ">

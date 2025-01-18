@@ -4,6 +4,7 @@ import bgImg from "../assets/bg img.png"
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import { FcGoogle } from "react-icons/fc";
 
 
 
@@ -34,10 +35,10 @@ const SignUp = () => {
             <div>
                 <div
                     style={{ backgroundImage: `url(${bgImg})` }}
-                    className="hero bg-base-200 min-h-screen">
-                    <div className="hero-content flex-col lg:flex-row-reverse">
+                    className="hero bg-base-200 pt-28 ">
+                    <div className="hero-content flex-col lg:flex-row-reverse ">
 
-                        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <div className="card bg-base-100 w-[400px]  shadow-2xl">
                             <form
                                 onSubmit={handleSubmit(onSubmit)}
                                 className="card-body">
@@ -90,16 +91,14 @@ const SignUp = () => {
                                 </div>
                                 <div className="form-control mt-6">
                                     <input
-                                        className="btn btn-primary"
+                                        className="btn  bg-yellow-700 text-white"
                                         type="submit" value="Sign  Up" />
                                 </div>
-                                <div className="form-control mt-6">
-                                    <input
-                                        className="btn btn-primary"
-                                        type="submit" value=" SignUp Google" />
+                                <div className="form-control mt-2">
+                                    <button className="btn bg-black yellow-700 text-white" ><FcGoogle />SignUp Google</button>
                                 </div>
                             </form>
-                            <p className="px-6"><small>Already have an Account <Link to="/login">Login Now</Link></small></p>
+                            <p className="px-3 text-center pb-3"><small>Already have an Account <Link to="/login"><i className="font-bold text-yellow-700 pl-4 ">Login Now</i></Link></small></p>
 
                         </div>
                     </div>
