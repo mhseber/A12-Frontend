@@ -13,7 +13,14 @@ const Banner = () => {
                                 className="input input-bordered input-warning w-[700px] text-black" />
                             <button className="btn btn-outline border-0 border-b-4 border-t-4 text-black">Search</button>
                         </div>
-                        <h2 className="pr-80 pt-4 text-[15px]">Popular Topics :</h2>
+                        <div>
+                            <h2 className="pr-80 pt-4 text-[15px] ">Popular Topics : </h2>
+                            <div className="pt-3 space-x-4">
+                                <button className="btn btn-outline btn-primary">Gaming</button>
+                                <button className="btn btn-outline btn-primary">Freelancing</button>
+                                <button className="btn btn-outline btn-primary">Photography</button>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
