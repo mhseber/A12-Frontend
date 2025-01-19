@@ -1,9 +1,11 @@
-import { MdCardMembership } from "react-icons/md";
+import { MdCardMembership, MdJoinLeft } from "react-icons/md";
 import logo from "../../../../assets/logo.png";
 import { IoIosHome } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../../../Providers/AuthProvider";
+import { LuLogIn } from "react-icons/lu";
+import { TbLogout2 } from "react-icons/tb";
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
 
@@ -15,16 +17,6 @@ const Navbar = () => {
     const navOptions = <>
         <li><Link to="/"><IoIosHome />Home</Link></li>
         <li><Link to="/membership"> <MdCardMembership />Membership</Link></li>
-        <li className="pl-52 ">
-            {
-                user ? <>
-
-                    <button onClick={handleLogOut} className="btn btn-outline border-0 border-b-4 border-t-4 text-black  ">LogOut</button>
-                </> : <>
-                    <li><Link to="/login">LogIn </Link></li>
-                </>
-            }
-        </li>
 
     </>
     return (
@@ -60,7 +52,25 @@ const Navbar = () => {
                         {navOptions}
                     </ul>
                 </div>
+                {/* dropdown */}
+                <div className="dropdown dropdown-hover pl-24">
+                    <div tabIndex={0} role="button" className="btn m-1 btn-outline border-0 border-b-4 border-t-4 text-black"><MdJoinLeft />Join Us</div>
+                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                        <li><Link to="/dashBoard">DashBoard</Link></li>
+                        <li>
+                            <li className=" ">
+                                {
+                                    user ? <>
 
+                                        <button onClick={handleLogOut} className="btn btn-outline border-0 border-b-4 border-t-4 text-black  "><TbLogout2 />LogOut</button>
+                                    </> : <>
+                                        <button className="btn btn-outline border-0 border-b-4 border-t-4 text-black "><Link to="/login" className="flex items-center gap-2"><LuLogIn /> LogIn</Link></button>
+                                    </>
+                                }
+                            </li>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </>
     );
