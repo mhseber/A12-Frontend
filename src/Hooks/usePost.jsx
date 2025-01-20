@@ -4,7 +4,7 @@ const usePost = () => {
     const [post, setPost] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/post')
+        fetch('https://threadtales.vercel.app/post')
             .then(res => res.json())
             .then(data => {
                 setPost(data);

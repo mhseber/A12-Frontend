@@ -4,7 +4,7 @@ const useAnno = () => {
     const [anno, setAnno] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/anno')
+        fetch('https://threadtales.vercel.app/anno')
             .then(res => res.json())
             .then(data => {
                 setAnno(data);
