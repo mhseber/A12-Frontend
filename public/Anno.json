@@ -1,0 +1,30 @@
+[
+    {
+        "title": "New Feature Release: Enhanced Dashboard",
+        "description": "Explore the latest updates to streamline your workflow.",
+        "img": "https://via.placeholder.com/300x200",
+        "name": "Admin Team",
+        "date": "2025-01-18"
+    },
+    {
+        "title": "Upcoming Maintenance Schedule",
+        "description": "Our system will be down for maintenance on Jan 25, 2025.",
+        "img": "https://via.placeholder.com/300x200",
+        "name": "Support Team",
+        "date": "2025-01-16"
+    },
+    {
+        "title": "Community Guidelines Updated",
+        "description": "We’ve revised our community policies to serve you better.",
+        "img": "https://via.placeholder.com/300x200",
+        "name": "Policy Team",
+        "date": "2025-01-12"
+    },
+    {
+        "title": "New Tutorials for Beginners",
+        "description": "Learn the basics with our newly launched beginner tutorials.",
+        "img": "https://via.placeholder.com/300x200",
+        "name": "Education Team",
+        "date": "2025-01-10"
+    }
+]

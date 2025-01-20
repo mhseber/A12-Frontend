@@ -15,7 +15,8 @@ const SignUp = () => {
         handleSubmit,
         formState: { errors }
     } = useForm();
-    const { createUser } = useContext(AuthContext);
+
+    const { createUser, signInWithGoogle } = useContext(AuthContext);
 
     const onSubmit = data => {
         console.log(data);
@@ -23,6 +24,16 @@ const SignUp = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+            });
+    };
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then((result) => {
+                console.log("Google sign-in success:", result.user);
+            })
+            .catch((error) => {
+                console.error("Google sign-in error:", error);
             });
     };
 
@@ -95,7 +106,9 @@ const SignUp = () => {
                                         type="submit" value="Sign  Up" />
                                 </div>
                                 <div className="form-control mt-2">
-                                    <button className="btn bg-black yellow-700 text-white" ><FcGoogle />SignUp Google</button>
+                                    <button
+                                        onClick={handleGoogleSignIn}
+                                        className="btn bg-black yellow-700 text-white" ><FcGoogle />SignUp Google</button>
                                 </div>
                             </form>
                             <p className="px-3 text-center pb-3"><small>Already have an Account <Link to="/login"><i className="font-bold text-yellow-700 pl-4 ">Login Now</i></Link></small></p>

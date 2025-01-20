@@ -13,7 +13,7 @@ const Login = () => {
 
     const [disabled, setDisabled] = useState(true);
 
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
 
     useEffect(() => {
         loadCaptchaEnginge(6);
@@ -59,6 +59,16 @@ const Login = () => {
             setDisabled(true)
         }
 
+    };
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then((result) => {
+                console.log("Google sign-in success:", result.user);
+            })
+            .catch((error) => {
+                console.error("Google sign-in error:", error);
+            });
     };
 
     return (
@@ -123,7 +133,9 @@ const Login = () => {
                                         value="LogIn" />
                                 </div>
                                 <div className="form-control mt-2">
-                                    <button className="btn bg-black yellow-700 text-white" ><FcGoogle />SignUp Google</button>
+                                    <button
+                                        onClick={handleGoogleSignIn}
+                                        className="btn bg-black yellow-700 text-white" ><FcGoogle />SignUp Google</button>
                                 </div>
                             </form>
                             <p className="px-3 text-center pb-3"><small>New Here?<Link to="/signup"><i className="text-blue-800">Create an Account</i></Link></small></p>
