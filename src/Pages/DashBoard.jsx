@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { CgProfile } from "react-icons/cg";
 import { IoHome } from "react-icons/io5";
 import { MdLocalPostOffice, MdOutlinePostAdd } from "react-icons/md";
@@ -5,7 +6,9 @@ import { MdLocalPostOffice, MdOutlinePostAdd } from "react-icons/md";
 const DashBoard = () => {
     return (
         <div className="lg:flex pt-36 pl-7 gap-3 pb-5">
-
+            <Helmet>
+                <title>ThreadTales /\ DashBoard</title>
+            </Helmet>
             <div>
                 {/* DashBoard */}
                 <div className="card card-compact bg-base-200 shadow-xl w-[350px] h-[500px]  bg-gradient-to-r from-yellow-500 to-yellow-400 ">

@@ -1,7 +1,11 @@
+import { Helmet } from "react-helmet";
 
 const Membership = () => {
     return (
         <div>
+            <Helmet>
+                <title>ThreadTales /\ Membership</title>
+            </Helmet>
             {/* Header Section */}
             <div className="pt-20">
                 <div className="hero bg-gradient-to-r from-yellow-600 to-yellow-400 text-white p-7">
