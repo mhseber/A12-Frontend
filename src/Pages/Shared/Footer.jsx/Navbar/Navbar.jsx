@@ -6,6 +6,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../../../Providers/AuthProvider";
 import { LuLogIn } from "react-icons/lu";
 import { TbLogout2 } from "react-icons/tb";
+
+import { IoNotificationsSharp } from "react-icons/io5";
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
 
@@ -52,8 +54,10 @@ const Navbar = () => {
                         {navOptions}
                     </ul>
                 </div>
+                <IoNotificationsSharp className="text-xl" />
                 {/* dropdown */}
                 <div className="dropdown dropdown-hover pl-24">
+
                     <div tabIndex={0} role="button" className="btn m-1 btn-outline border-0 border-b-4 border-t-4 text-black"><MdJoinLeft />Join Us</div>
                     <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                         <li><Link to="/dashBoard">DashBoard</Link></li>
