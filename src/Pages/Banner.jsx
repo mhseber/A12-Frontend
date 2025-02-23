@@ -1,8 +1,9 @@
 
 const Banner = () => {
+
     return (
         <div>
-            <div className="hero bg-gradient-to-r from-yellow-600 to-yellow-400 text-white pt-28">
+            <div className="hero bg-gradient-to-r from-[#7886C7] to-blue-950 text-white pt-28">
                 <div className="hero-content text-center">
                     <div className="max-w-md">
                         <h1 className="text-5xl font-bold">Find Your Topics </h1>
@@ -16,9 +17,24 @@ const Banner = () => {
                         <div>
                             <h2 className="pr-80 pt-4 text-[15px] ">Popular Topics : </h2>
                             <div className="pt-3 space-x-4">
-                                <button className="btn btn-outline btn-primary">Gaming</button>
-                                <button className="btn btn-outline btn-primary">Freelancing</button>
-                                <button className="btn btn-outline btn-primary">Photography</button>
+                                <button
+                                    className="btn btn-outline btn-primary"
+
+                                >
+                                    Gaming
+                                </button>
+                                <button
+                                    className="btn btn-outline btn-primary"
+
+                                >
+                                    Freelancing
+                                </button>
+                                <button
+                                    className="btn btn-outline btn-primary"
+
+                                >
+                                    Photography
+                                </button>
                             </div>
                         </div>
                     </div>

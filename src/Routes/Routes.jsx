@@ -7,6 +7,9 @@ import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
 import Membership from "../Pages/Membership";
 import DashBoard from "../Pages/DashBoard";
+import MyProfile from "../Pages/MyProfile";
+import AddPost from "../Pages/AddPost";
+import MyPost from "../Pages/MyPost";
 
 export const router = createBrowserRouter([
     {
@@ -32,6 +35,18 @@ export const router = createBrowserRouter([
             {
                 path: 'dashBoard',
                 element: <DashBoard></DashBoard>
+            },
+            {
+                path: 'myProfile',
+                element: <MyProfile></MyProfile>
+            },
+            {
+                path: 'addPost',
+                element: <AddPost></AddPost>
+            },
+            {
+                path: 'myPost',
+                element: <MyPost></MyPost>
             }
         ],
     },
