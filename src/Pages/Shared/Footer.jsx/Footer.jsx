@@ -1,3 +1,7 @@
+import { FaTwitter } from "react-icons/fa";
+import { IoLogoLinkedin } from "react-icons/io";
+import { SiFacebook } from "react-icons/si";
+import logo from "../../../assets/logo.png"
 
 const Footer = () => {
     return (
@@ -7,9 +11,12 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Column 1: Branding */}
                     <div>
-                        <h3 className="text-lg font-bold">ThreadTales</h3>
-                        <p className="text-sm mt-2">
-                            Building conversations, one thread at a time.
+                        <div className="flex gap-2">
+                            <img className="w-10" src={logo} alt="logo" />
+                            <h3 className="text-2xl font-bold">ThreadTales</h3>
+                        </div>
+                        <p className="text-sm font-semibold mt-2">
+                            The website is designed to connect people, share ideas, and foster meaningful interactions.With user-friendly navigation and modern features, it allows users to post updates, share media, and engage in real-time conversations.
                         </p>
                     </div>
 
@@ -50,7 +57,7 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 className="text-xl hover:text-blue-500"
                             >
-                                <i className="fab fa-facebook"></i>
+                                <i className="fab fa-facebook"><SiFacebook /></i>
                             </a>
                             <a
                                 href="https://twitter.com"
@@ -58,7 +65,7 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 className="text-xl hover:text-blue-400"
                             >
-                                <i className="fab fa-twitter"></i>
+                                <i className="fab fa-twitter"><FaTwitter /></i>
                             </a>
                             <a
                                 href="https://linkedin.com"
@@ -66,7 +73,7 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 className="text-xl hover:text-blue-600"
                             >
-                                <i className="fab fa-linkedin"></i>
+                                <i className="fab fa-linkedin"><IoLogoLinkedin /></i>
                             </a>
                         </div>
                     </div>
