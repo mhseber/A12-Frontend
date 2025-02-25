@@ -1,6 +1,7 @@
 import { FaRegComments } from "react-icons/fa";
 import usePost from "../Hooks/usePost";
 import { MdHowToVote } from "react-icons/md";
+import Swal from "sweetalert2";
 
 
 const AllLatestPosts = () => {
@@ -49,8 +50,44 @@ const AllLatestPosts = () => {
                                 </div>
                                 <div className=" lg:flex pl-32  pt-10 space-y-5 ">
                                     <p className="text-gray-800">  Posted :{timeAgo(item.date)}</p>
-                                    <p className="flex  text-gray-800 gap-2 "> <FaRegComments className="text-2xl" />comments</p>
-                                    <p className="flex text-gray-800 gap-2"><MdHowToVote className="text-2xl" />Votes</p>
+                                    <p
+                                        className="flex text-gray-800 gap-2 cursor-pointer"
+                                        onClick={() => Swal.fire({
+                                            title: `Comments for ${item.title}`,
+                                            text: item.comments || "Very Good Keep Trying",
+                                            imageUrl: item.img || "https://unsplash.it/400/200",
+                                            imageWidth: 400,
+                                            imageHeight: 200,
+                                            imageAlt: item.title
+                                        })}
+                                    >
+                                        <FaRegComments className="text-2xl" /> Comments
+                                    </p>
+                                    <p
+                                        className="flex text-gray-800 gap-2 cursor-pointer"
+                                        onClick={() =>
+                                            Swal.fire({
+                                                title: "Votes Count",
+                                                text: `This post has ${item.votes || 0} votes.`,
+                                                showClass: {
+                                                    popup: `
+                                                            animate__animated
+                                                            animate__fadeInUp
+                                                            animate__faster
+                                                         `,
+                                                },
+                                                hideClass: {
+                                                    popup: `
+                                                            animate__animated
+                                                            animate__fadeOutDown
+                                                                animate__faster
+                                                        `,
+                                                },
+                                            })
+                                        }
+                                    >
+                                        <MdHowToVote className="text-2xl" /> Votes
+                                    </p>
                                 </div>
                             </div>
                             <div>

@@ -10,6 +10,7 @@ import DashBoard from "../Pages/DashBoard";
 import MyProfile from "../Pages/MyProfile";
 import AddPost from "../Pages/AddPost";
 import MyPost from "../Pages/MyPost";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -34,7 +35,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'dashBoard',
-                element: <DashBoard></DashBoard>
+                element: <PrivateRoute><DashBoard></DashBoard></PrivateRoute>
             },
             {
                 path: 'myProfile',
